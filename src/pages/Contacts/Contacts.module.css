@@ -1,0 +1,14 @@
+.section {
+    padding-top: 130px;
+    padding-bottom: 30px;
+}
+.icon {
+    font-size: 40px;
+}
+
+.section .btn {
+    width: 70px;
+    height: 70px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+}

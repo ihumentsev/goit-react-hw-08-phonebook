@@ -1,0 +1,24 @@
+header {
+    border: 1px solid #ECECEC;
+    background-color: rgb(25, 118, 210);
+    position: fixed;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header .conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+        padding: 0 15px;
+        margin: 0 auto;
+        
+}
+
+.icon {
+    font-size: 50px;
+}
