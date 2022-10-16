@@ -37,9 +37,6 @@ const authSlice = createSlice({
       state.user = action.payload;
       state.isLoggedIn = true;
     },
-    [featchCurrentUser.rejected](state, action) {
-      state.user = { name: null, email: null };
-    },
   },
 });
 

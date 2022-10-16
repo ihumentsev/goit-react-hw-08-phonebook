@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/authOperatione';
 import css from '../Login/Login.module.css';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -32,24 +34,32 @@ export default function Login() {
 
   return (
     <>
-      <section className={css.section}></section>
-      <form onSubmit={hendelSubmit}>
-        <input
-          name="email"
-          placeholder="your email"
-          type="email"
-          onChange={hendelChange}
-          value={email}
-        />
-        <input
-          name="password"
-          placeholder="your password"
-          type="text"
-          value={password}
-          onChange={hendelChange}
-        />
-        <button type="submite">Log in</button>
-      </form>
+      <section className={css.section}>
+        <form onSubmit={hendelSubmit} className={css.form}>
+          <TextField
+            className={css.input}
+            label="Email"
+            id="outlined-size-normal"
+            name="email"
+            type="email"
+            onChange={hendelChange}
+            value={email}
+          />
+          <TextField
+            className={css.input}
+            label="Password"
+            id="outlined-size-normal"
+            name="password"
+            type="text"
+            value={password}
+            onChange={hendelChange}
+          />
+
+          <Button className={css.btn} type="submite" variant="contained">
+            Log in
+          </Button>
+        </form>
+      </section>
     </>
   );
 }

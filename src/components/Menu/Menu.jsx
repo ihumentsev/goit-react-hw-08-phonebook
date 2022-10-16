@@ -1,11 +1,16 @@
 import { NavLink } from 'react-router-dom';
+import css from '../Menu/Menu.module.css';
 
 export default function Menu() {
   return (
     <>
-      <div>
-        <NavLink to={'/register'}>Sign In</NavLink>
-        <NavLink to={'/login'}>log In</NavLink>
+      <div className={css.wraper}>
+        <NavLink to={'/register'} className={css.link}>
+          SignIn
+        </NavLink>
+        <NavLink to={'/login'} className={css.link}>
+          logIn
+        </NavLink>
       </div>
     </>
   );

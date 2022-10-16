@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -48,11 +48,9 @@ export const featchCurrentUser = createAsyncThunk(
     const state = thunkAPI.getState();
     const persistToken = state.auth.token;
     if (persistToken === null) {
-      console.log('return');
-      return thunkAPI.RejectedWithValue();
+      return thunkAPI.RejectWithValue();
     }
     token.set(persistToken);
-    console.log('gogogo');
     try {
       const { data } = await axios.get('/users/current');
       return data;

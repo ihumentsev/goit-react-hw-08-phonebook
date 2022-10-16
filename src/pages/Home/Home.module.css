@@ -1,4 +1,38 @@
+
 .section {
     padding-top: 130px;
     padding-bottom: 30px;
+}
+
+.image {
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.wraper {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.wraper .btn {
+    width: 200px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.link {
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
 }

@@ -1,0 +1,27 @@
+.wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.wraper .icon {
+    width:  100px;
+    height: 100px;
+}
+
+.text {
+    font-size: 30px;
+    font-style: oblique;
+}
+
+.btn_icon  {
+    font-size: 40px;
+    margin-right: 100px;
+}
+
+.btn_icon:hover {
+    scale: 1.25;
+}

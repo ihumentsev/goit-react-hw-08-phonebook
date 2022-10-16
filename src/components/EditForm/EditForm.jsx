@@ -3,13 +3,12 @@ import Fab from '@mui/material/Fab';
 import { MdOutlinePersonAddAlt } from 'react-icons/md';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts, getContacts } from 'redux/operations';
+import { editContacts, getContacts } from 'redux/operations';
 import { useEffect } from 'react';
 
-export default function ContactForm({ closeModal }) {
-  const contacts = useSelector(state => state.contacts.contacts);
-
+export default function EditForm({ click, contact }) {
   const isUpdate = useSelector(state => state.contacts.upDate);
+
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -30,19 +29,19 @@ export default function ContactForm({ closeModal }) {
 
   const handleFormSubmit = event => {
     event.preventDefault();
-    const addName = contacts.map(el => el.name).includes(name);
-    if (addName) {
-      alert(`${event.name} is already in contacts`);
-    } else {
-      const contact = {
+
+    const editContact = {
+      id: contact.id,
+      cont: {
         name,
         number,
-      };
+      },
+    };
 
-      dispatch(addContacts(contact));
-    }
+    dispatch(editContacts(editContact));
+
     formReset();
-    closeModal();
+    click();
   };
 
   const formReset = () => {

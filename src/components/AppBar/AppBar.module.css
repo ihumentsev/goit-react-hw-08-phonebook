@@ -5,6 +5,7 @@ header {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 1000;
 }
 
 header .conteiner {
@@ -12,7 +13,6 @@ header .conteiner {
     flex-wrap: wrap;
     min-height: 80px;
     align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
         padding: 0 15px;
         margin: 0 auto;
@@ -20,5 +20,5 @@ header .conteiner {
 }
 
 .icon {
-    font-size: 50px;
+    font-size: 80px;
 }

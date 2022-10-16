@@ -2,6 +2,14 @@
     padding-top: 130px;
     padding-bottom: 30px;
 }
+.wraper {
+    max-width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 30px auto;
+}
 .icon {
     font-size: 40px;
 }
@@ -9,6 +17,12 @@
 .section .btn {
     width: 70px;
     height: 70px;
-    margin-left: 25px;
+    
+}
+
+.content {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
     margin-bottom: 30px;
 }

@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getContacts, addContacts, removeContacts } from './operations';
-// import {
-//   getContacts,
-//   addContacts,
-//   removeContacts,
-// } from '../redux/operation/contactsOperation';
+import {
+  getContacts,
+  addContacts,
+  removeContacts,
+  editContacts,
+} from './operations';
 
 const contactsSlice = createSlice({
   name: 'contacts',
@@ -58,6 +58,19 @@ const contactsSlice = createSlice({
       state.isLoading = false;
       state.upDate = false;
       state.error = payload;
+    },
+    [editContacts.pending]: (state, action) => {
+      state.isLoading = true;
+      state.upDate = false;
+    },
+    [editContacts.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.upDate = true;
+    },
+    [editContacts.rejected]: (state, action) => {
+      state.isLoading = false;
+      state.upDate = false;
+      state.error = action.payload;
     },
   },
 });

@@ -23,7 +23,7 @@ export default function LoginControl() {
           />
         }
       />
-      <span className={css.text}>LOGOUT</span>
+      <span className={css.text}>LogOut</span>
     </div>
   );
 }

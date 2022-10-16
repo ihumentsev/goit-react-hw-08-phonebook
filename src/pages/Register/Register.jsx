@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/authOperatione';
+import css from '../Register/Register.module.css';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -36,30 +39,38 @@ export default function Register() {
   };
   return (
     <>
-      <form onSubmit={hendelSubmit}>
-        <input
-          name="name"
-          placeholder="plese enter your name"
-          type="text"
-          value={name}
-          onChange={hendelChange}
-        />
-        <input
-          name="email"
-          placeholder="your email"
-          type="email"
-          onChange={hendelChange}
-          value={email}
-        />
-        <input
-          name="password"
-          placeholder="your password"
-          type="text"
-          value={password}
-          onChange={hendelChange}
-        />
-        <button type="submite">Sign up</button>
-      </form>
+      <section className={css.section}>
+        <form onSubmit={hendelSubmit} className={css.form}>
+          <TextField
+            className={css.input}
+            label="Plese enter your name"
+            name="name"
+            placeholder="plese enter your name"
+            type="text"
+            value={name}
+            onChange={hendelChange}
+          />
+          <TextField
+            className={css.input}
+            label="Your email"
+            name="email"
+            type="email"
+            onChange={hendelChange}
+            value={email}
+          />
+          <TextField
+            className={css.input}
+            label="Your password"
+            name="password"
+            type="text"
+            value={password}
+            onChange={hendelChange}
+          />
+          <Button className={css.btn} type="submite" variant="contained">
+            Sign up
+          </Button>
+        </form>
+      </section>
     </>
   );
 }
