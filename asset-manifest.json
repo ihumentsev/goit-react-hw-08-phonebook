@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.5c8a9b0d.css",
-    "main.js": "/static/js/main.9641eac2.js",
-    "static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.png": "/static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.f84c1df6681352b86e60.png",
-    "index.html": "/index.html",
-    "main.5c8a9b0d.css.map": "/static/css/main.5c8a9b0d.css.map",
-    "main.9641eac2.js.map": "/static/js/main.9641eac2.js.map"
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.5c8a9b0d.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.b694605d.js",
+    "static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.png": "/goit-react-hw-08-phonebook/static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.f84c1df6681352b86e60.png",
+    "index.html": "/goit-react-hw-08-phonebook/index.html",
+    "main.5c8a9b0d.css.map": "/goit-react-hw-08-phonebook/static/css/main.5c8a9b0d.css.map",
+    "main.b694605d.js.map": "/goit-react-hw-08-phonebook/static/js/main.b694605d.js.map"
   },
   "entrypoints": [
     "static/css/main.5c8a9b0d.css",
-    "static/js/main.9641eac2.js"
+    "static/js/main.b694605d.js"
   ]
 }
