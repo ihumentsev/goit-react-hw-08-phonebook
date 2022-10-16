@@ -16,7 +16,7 @@ export const App = () => {
 
   useEffect(() => {
     dispatch(featchCurrentUser());
-  }, []);
+  }, [dispatch]);
   return (
     <div className={css.container}>
       <Routes>

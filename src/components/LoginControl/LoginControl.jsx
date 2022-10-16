@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/authOperatione';
 export default function LoginControl() {
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const dispatch = useDispatch();
   return (
     <div className={css.wraper}>

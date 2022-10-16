@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Navigate, Outlet, redirect, Route } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import authSelectors from 'redux/selectors';
 
 export default function PrivatRoute() {
