@@ -31,7 +31,6 @@ export default function Register() {
   const hendelSubmit = e => {
     e.preventDefault();
     const user = { name, email, password };
-    console.log(user);
     dispatch(register(user));
     setName('');
     setEmail('');

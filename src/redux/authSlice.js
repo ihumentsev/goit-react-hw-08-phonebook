@@ -11,14 +11,7 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   extraReducers: {
-    // [register.pending](state, action) {
-    //   console.log(state, action);
-    //   // state.user = action.paylod.user;
-    //   // state.token = action.paylod.token;
-    //   // state.isLoggedIn = true;
-    // },
     [register.fulfilled](state, action) {
-      console.log(state, action);
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
