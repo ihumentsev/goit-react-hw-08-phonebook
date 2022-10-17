@@ -47,14 +47,15 @@ export const featchCurrentUser = createAsyncThunk(
     const state = thunkAPI.getState();
     const persistToken = state.auth.token;
     if (persistToken === null) {
-      return thunkAPI.rejectWithValue();
+      console.log('Token undefined');
+      return thunkAPI.reject();
     }
     token.set(persistToken);
     try {
       const { data } = await axios.get('/users/current');
       return data;
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   }
 );

@@ -4,6 +4,7 @@ import Switch from '@mui/material/Switch';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/authOperatione';
+
 export default function LoginControl() {
   const [loading] = useState(false);
   const dispatch = useDispatch();
