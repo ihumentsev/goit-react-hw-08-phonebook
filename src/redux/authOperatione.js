@@ -48,7 +48,7 @@ export const featchCurrentUser = createAsyncThunk(
     const persistToken = state.auth.token;
     if (persistToken === null) {
       console.log('Token undefined');
-      return thunkAPI.reject();
+      return thunkAPI.rejectWithValue();
     }
     token.set(persistToken);
     try {
