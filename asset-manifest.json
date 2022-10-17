@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.5c8a9b0d.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.515544fc.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.ae635c38.js",
     "static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.png": "/goit-react-hw-08-phonebook/static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.f84c1df6681352b86e60.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.5c8a9b0d.css.map": "/goit-react-hw-08-phonebook/static/css/main.5c8a9b0d.css.map",
-    "main.515544fc.js.map": "/goit-react-hw-08-phonebook/static/js/main.515544fc.js.map"
+    "main.ae635c38.js.map": "/goit-react-hw-08-phonebook/static/js/main.ae635c38.js.map"
   },
   "entrypoints": [
     "static/css/main.5c8a9b0d.css",
-    "static/js/main.515544fc.js"
+    "static/js/main.ae635c38.js"
   ]
 }
