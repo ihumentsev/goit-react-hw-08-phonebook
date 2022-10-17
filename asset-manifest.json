@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.e2206187.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.f66c3734.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.0ee713d1.js",
     "static/css/936.34dce6d7.chunk.css": "/goit-react-hw-08-phonebook/static/css/936.34dce6d7.chunk.css",
     "static/js/936.690ae4e3.chunk.js": "/goit-react-hw-08-phonebook/static/js/936.690ae4e3.chunk.js",
     "static/css/765.686f57de.chunk.css": "/goit-react-hw-08-phonebook/static/css/765.686f57de.chunk.css",
@@ -15,7 +15,7 @@
     "static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.png": "/goit-react-hw-08-phonebook/static/media/kak-uznat-kolvo-kontaktov-v-iphone-3.f84c1df6681352b86e60.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.e2206187.css.map": "/goit-react-hw-08-phonebook/static/css/main.e2206187.css.map",
-    "main.f66c3734.js.map": "/goit-react-hw-08-phonebook/static/js/main.f66c3734.js.map",
+    "main.0ee713d1.js.map": "/goit-react-hw-08-phonebook/static/js/main.0ee713d1.js.map",
     "936.34dce6d7.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/936.34dce6d7.chunk.css.map",
     "936.690ae4e3.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/936.690ae4e3.chunk.js.map",
     "765.686f57de.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/765.686f57de.chunk.css.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.e2206187.css",
-    "static/js/main.f66c3734.js"
+    "static/js/main.0ee713d1.js"
   ]
 }
