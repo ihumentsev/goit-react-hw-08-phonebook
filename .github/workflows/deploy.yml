@@ -27,7 +27,7 @@ jobs:
         uses: SamKirkland/web-deploy@v1
         with:
           target-server: vs2389.mirohost.net
-          remote-user: testcx
+          remote-user: test
           private-ssh-key: ${{ secrets.SSH_KEY }}
           ssh-port: 22
           destination-path: ~/test.com.ua/
