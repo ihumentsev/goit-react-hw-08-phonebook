@@ -23,7 +23,7 @@ jobs:
           branch: gh-pages
           folder: build
       - name: 📂 Sync Files
-        uses: ihumentsev/goit-react-hw-08-phonebook/web-deploy@v1
+        uses: ihumentsev/web-deploy@v1
         with:
           target-server: vs2389.mirohost.net
           remote-user: testvb
