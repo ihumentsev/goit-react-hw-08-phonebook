@@ -1,34 +1,17 @@
-name: Build and deploy to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-
+on: push
+name: Publish Website
 jobs:
-  build-and-deploy:
+  web-deploy:
+    name: 🚀 Deploy Website Every Commit
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Install, lint, build 🔧
-        run: |
-          npm install
-          npm run lint:js
-          npm run build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: build
-
-      - name: 📂 Sync Files
-        uses: SamKirkland/web-deploy@v1
-        with:
-          target-server: vs2389.mirohost.net
-          remote-user: testcx
-          private-ssh-key: ${{ secrets.SSH_KEY }}
-          
-          destination-path: ~/test.com.ua/
-          rsync-options: --dry-run --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
+    - name: 🚚 Get Latest Code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync Files
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: vs2389.mirohost.net
+        remote-user: user
+        private-ssh-key: ${{ secrets.SSH_KEY }}
+        destination-path: ~/test.com.ua/
