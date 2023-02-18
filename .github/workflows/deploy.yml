@@ -10,10 +10,10 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-    # - name: 🔨 Build Project
-    #   run: |
-    #     npm install
-    #     npm run build  
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build  
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -21,6 +21,7 @@ jobs:
         server: vs2389.mirohost.net
         username: testvb
         password: ${{ secrets.password }}
+        server-dir: ./test.com.ua
         exclude: |
           **/.git*
           **/.git*/**
