@@ -18,4 +18,4 @@ jobs:
         username: testvb
         password: ${{ secrets.password }}
         server-dir: ./test.com.ua/
-        dry-run: true
+        
