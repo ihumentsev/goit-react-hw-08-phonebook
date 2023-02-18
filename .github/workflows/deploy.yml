@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v2
       # Setup key
       - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key"
+      - run: mkdir "$/var/www/testvb/.ssh/authorized_keys"
+      - run: echo "${{ secrets.key }}" > "$/var/www/testvb/.ssh/authorized_keys"
+      - run: chmod 600 "$/var/www/testvb/.ssh/authorized_keys"
       # Build
       # - run: npm ci
       # - run: npm run build
       # Deploy
-      - run: rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . vs2389.mirohost.net:/test.com.ua
+      - run: rsync -e "ssh -p 22 -i $/var/www/testvb/.ssh/authorized_keys -o StrictHostKeyChecking=no" --archive --compress --delete . vs2389.mirohost.net:/var/www/testvb/test.com.ua
