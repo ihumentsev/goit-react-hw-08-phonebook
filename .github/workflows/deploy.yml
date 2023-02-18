@@ -1,19 +1,19 @@
-on: push
-name: Publish Website Dry Run
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  web-deploy:
-    name: 🚀 Deploy Website Every Commit
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get Latest Code
-      uses: actions/checkout@v3
-
-    - name: 📂 Sync Files
-      uses: SamKirkland/web-deploy@v1
-      with:
-        target-server: vs2389.mirohost.net
-        remote-user: testcx
-        private-ssh-key: q5Go2xToZcS0
-        ssh-port: 22
-        destination-path: ~/
-        rsync-options: --dry-run --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
+      - uses: actions/checkout@v2
+      # Setup key
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
+      # Deploy
+      - run: cd app && rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . vs2389.mirohost.net:/home/test.com.ua
