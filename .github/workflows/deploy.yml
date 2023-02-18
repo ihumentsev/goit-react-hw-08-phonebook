@@ -1,22 +1,25 @@
-name: Deploy
-
 on:
   push:
     branches:
       - main
-
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # Setup key
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/authorized_keys"
-      - run: chmod 600 "$HOME/.ssh/authorized_keys"
-      # Build
-      # - run: npm ci
-      # - run: npm run build
-      # Deploy
-      - run: rsync -e "ssh -p 22 -i $HOME/.ssh/authorized_keys -o StrictHostKeyChecking=no" --archive --compress --delete . vs2389.mirohost.net:/var/www/testvb//test.com.ua
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: vs2389.mirohost.net
+        username: testvb
+        password: ${{ secrets.password }}
+        dry-run: true
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          fileToExclude.txt
