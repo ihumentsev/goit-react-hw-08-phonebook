@@ -21,7 +21,7 @@ jobs:
         server: vs2389.mirohost.net
         username: testvb
         password: ${{ secrets.password }}
-        server-dir: ./test.com.ua
+        server-dir: ./test.com.ua/
         exclude: |
           **/.git*
           **/.git*/**
