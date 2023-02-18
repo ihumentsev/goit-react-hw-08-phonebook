@@ -15,7 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: vs2389.mirohost.net
-        port: 22
         username: testvb
         password: ${{ secrets.password }}
         server-dir: ./test.com.ua/
