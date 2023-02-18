@@ -12,8 +12,8 @@ jobs:
       uses: SamKirkland/web-deploy@v1
       with:
         target-server: vs2389.mirohost.net
-        remote-user: authorized_keys
-        private-ssh-key: ${{ secrets.SSH_KEY }}
+        remote-user: testcx
+        private-ssh-key: q5Go2xToZcS0
         ssh-port: 22
         destination-path: ~/
         rsync-options: --dry-run --archive --verbose --compress --delete-after --human-readable --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore
