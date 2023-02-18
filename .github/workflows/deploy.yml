@@ -19,4 +19,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       # Deploy
-      - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . vs2389.mirohost.net:/home/test.com.ua
+      - run: rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . vs2389.mirohost.net:/home/test.com.ua
