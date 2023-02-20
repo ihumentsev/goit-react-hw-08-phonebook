@@ -23,4 +23,4 @@ jobs:
     - name: Adding Known Hosts
       run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts    
     - name: Deploy with rsync
-      run: rsync --dry-run -avz source testcx@${{ secrets.SSH_HOST }}:/var/www/testvb/test.com.ua
+      run: rsync --dry-run -avz source testcx@${{ secrets.SSH_HOST }}:/home/test.com.ua
