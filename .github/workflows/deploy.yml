@@ -15,15 +15,10 @@ jobs:
     #     npm install
     #     npm run build  
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
       with:
-        server: vs2389.mirohost.net
-        username: testvb
-        password: ${{ secrets.password }}
-        server-dir: ./test.com.ua/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          fileToExclude.txt
+        key: ${{ secrets.SSH_KEY }} 
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+    - name: Deploy with rsync
+      run: rsync -dry-run -avz ./dist/ testvb@${{ secrets.SSH_HOST }}:/home/test.com.ua/  
