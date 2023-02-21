@@ -23,5 +23,5 @@ jobs:
     - name: Adding Known Hosts
       run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts    
     - name: Deploy with rsync
-      run: rsync  --archive --verbose --compress -c --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=.gitignore --exclude=node_modules ./ ${{ secrets.USER_NAME }}@${{ secrets.SSH_HOST }}:/var/www/testvb/test.com.ua
+      run: rsync  --archive --verbose --compress -c —delete --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=.gitignore --exclude=node_modules ./ ${{ secrets.USER_NAME }}@${{ secrets.SSH_HOST }}:/var/www/testvb/test.com.ua
          
