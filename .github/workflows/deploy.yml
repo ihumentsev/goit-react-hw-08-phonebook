@@ -10,10 +10,10 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-    # - name: 🔨 Build Project
-    #   run: |
-    #     npm install
-    #     npm run build  
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build  
 
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
@@ -23,5 +23,5 @@ jobs:
     - name: Adding Known Hosts
       run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts    
     - name: Deploy with rsync
-      run: rsync  --archive --verbose --compress -c --delete --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules ./ ${{ secrets.USER_NAME }}@${{ secrets.SSH_HOST }}:/var/www/testvb/test.com.ua
+      run: rsync  --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules ./ ${{ secrets.USER_NAME }}@${{ secrets.SSH_HOST }}:/var/www/testvb/test.com.ua
          
